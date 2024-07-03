@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số lần xuất hiện của phần tử trong mảng</title>
+</head>
+<body>
+    <script>
+        // Khai báo mảng số nguyên
+        var arr = [1, 3, 5, 7, 9, 1, 3, 5, 1, 9, 10, 1];
+
+        // Nhập giá trị từ người dùng
+        var inputValue = prompt("Nhập vào một số nguyên bất kỳ:");
+
+        // Chuyển đổi inputValue từ chuỗi sang số nguyên
+        var searchValue = parseInt(inputValue);
+
+        // Kiểm tra giá trị nhập vào có hợp lệ không
+        if (isNaN(searchValue)) {
+            console.log("Giá trị nhập vào không phải là số nguyên hợp lệ.");
+        } else {
+            // Đếm số lần xuất hiện của searchValue trong mảng
+            var count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] === searchValue) {
+                    count++;
+                }
+            }
+
+            // In ra kết quả
+            console.log(`Số lần xuất hiện của phần tử ${searchValue} trong mảng là: ${count}`);
+        }
+    </script>
+</body>
+</html>
